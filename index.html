@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h1>E-MAIL GENERATOR</h1>
+        <input type="text" name="name" id="inp1"><br><br>
+        <input type="text" name="name" id="inp2"><br><br>
+        <button id="btn">Generate Mail</button><br><br>
+    </form>
+    <script>
+        var form=document.getElementsByTagName("form")
+        var btn=document.getElementById("btn")
+        btn.addEventListener("click",function(e){
+            e.preventDefault()
+            var inp1=document.getElementById("inp1").value
+            var inp2=document.getElementById("inp2").value
+            var res=(inp1.toLowerCase()+"."+inp2.toLowerCase()+"@gmail.com")
+            document.body.append(res)
+        })
+        // let str=prompt("Enter a Name")
+        // let matches=str.match(/[AEIOUaeiou]/g)
+        // let mat=matches?matches.length:0
+        // console.log(mat)
+    </script>
+</body>
+</html>
